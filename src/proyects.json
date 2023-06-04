@@ -1,0 +1,47 @@
+[
+  {
+    "nombre": "Token con Nodejs",
+    "descripcion": "esto seria una api usando nodejs express y json web token con medio de autorizacion es el token ",
+    "imagen": "https://th.bing.com/th/id/R.7835fd7e3576c2679e2ac097a318baab?rik=qPVY3SPKriF7TQ&pid=ImgRaw&r=0",
+    "link": "https://github.com/odiseo153/Nodejs_Token.git"
+  },
+  {
+    "nombre": "Rick and Morty Api",
+    "descripcion": "esta es una pagina dinamica que te permite ver a los personajes de rick and morty mediante su api publica",
+    "imagen": "https://th.bing.com/th/id/R.4d108a90a68556693ba3dc46aba6db0d?rik=cx1TjYWvwSMdaw&pid=ImgRaw&r=0",
+    "link": "https://rick_and_morty_odiseo.surge.sh/"
+  },
+  {
+    "nombre": "Sequelize",
+    "descripcion": "esta api fue hecha con el orm de nodejs Sequelize usando una base de datos en mysql cuenta con las funciones basicas CRUD",
+    "imagen": "https://th.bing.com/th/id/R.4847e89f1c4c224b721495b003fa134e?rik=ri0brBDuiyWlHA&pid=ImgRaw&r=0",
+    "link": "https://github.com/odiseo153/Sequelize"
+  },
+
+  {
+    "nombre": "Web api C#",
+    "descripcion": "una api hecha en C# con las funciones CRUD hecha en C# usando el ORM entityFramework y Sql server para la obtecion de datos, en el repositorio encontrara la base de datos",
+    "imagen": "https://th.bing.com/th/id/R.76c321be3abb140854c0b5b7e6272b93?rik=wRsB7jjTIsbXGg&riu=http%3a%2f%2fwww.codeproject.com%2fKB%2fdotnet%2f1064966%2fentity-framework.png&ehk=yBLVUsV0VR60GYendXrhCSlI455YEjMA6B3%2boQxMurg%3d&risl=&pid=ImgRaw&r=0",
+    "link": "https://github.com/odiseo153/WebApi"
+  },
+
+  {
+    "nombre": "Peliculas con asp.net",
+    "descripcion": "este es una pagina web hecha con ASP.NET,entity framework,sql server",
+    "imagen": "https://img.vidible.tv/prod/2017-10/31/59f8e495c74d4706601a7ee4/59f8f00e35b1cb12229134d9_o_U_v1.jpg?q=50",
+    "link": "https://github.com/odiseo153/Pagina_Con_Asp.net"
+  },
+  {
+    "nombre": "Patrones de Diseño",
+    "descripcion": "estos son diferentes proyectos en consola en donde muetro mi manejo de algunos patrones de diseños",
+    "imagen": "https://kotlin.desarrollador-android.com/wp-content/uploads/2019/03/patrones-de-diseno-kotlin.jpg",
+    "link": "https://github.com/odiseo153/Patrones_con_C-sharp"
+  },
+
+  {
+    "nombre": "Peliculas con React",
+    "descripcion": "este es una pagina web hecha con React que te permite no solo ver las peliculas del momento si no tambien que al darle click a alguna imagen te envia a ver esa pelicula los datos son obtenidos de un json",
+    "imagen": "https://jcpatriot.com/wp-content/uploads/2014/10/Movie-posters.jpg",
+    "link": "https://peliculas_odiseo.surge.sh/"
+  }
+]

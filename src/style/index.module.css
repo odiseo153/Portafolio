@@ -1,0 +1,80 @@
+
+#todo
+{
+align-items: center;
+justify-items: center;
+}
+
+
+#central
+{
+
+top: 70px;
+left: 400px;
+align-items: center;
+justify-items: center;
+width: 800px;
+height: 280px;
+}
+
+
+#cubo
+{
+position: relative;
+border-radius: 10px;
+width: 200px;
+height: 200px;
+}
+
+#cubo ,img
+{
+width: 200px;
+}
+
+#cubo1{
+    position: relative;
+    border-radius: 10px;
+left: 90px;
+    width: 300px;
+    height: 200px;
+}
+
+
+
+#cubo2
+{
+position: relative;
+border-radius: 10px;
+width: 300px;
+height: 200px;
+}
+
+
+#cubos
+{
+display: flex;
+position: relative;
+top: 100px;
+margin-right: 10px;
+align-items: center;
+justify-content: center;
+
+}
+
+#carta
+{
+width: 300px;
+height: 100px;
+}
+
+
+
+#flex
+{
+display: inline-flex;
+margin-top: 10px;
+
+
+}
+
+
