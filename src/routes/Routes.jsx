@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from '../Components/about';
+import About from '../Components/About';
 import Proyectos from '../Components/Proyectos';
-import ContatcMe from '../Components/ContatcMe';
 
 export default function Rutas() {
   return (
