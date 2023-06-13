@@ -1,28 +1,15 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react';
+import style from '../style/index.module.css';
 
-
-export default function ContatcMe() {
-
-const { register, handleSubmit } = useForm()
-
-
+export default function ContactMe() {
   return (
     <div>
-      <form action="/action_page.php">
-  <div className="form-group">
-    <label>Email address:</label>
-    <input type="email" className="form-control" id="email"/>
-  </div>
-  <div className="form-group">
-    <label>Password:</label>
-    <input type="textarea" className="form-control"/>
-  </div>
-  <div className="checkbox">
-    <label><input type="checkbox"/> Remember me</label>
-  </div>
-  <button type="submit" className="btn btn-default">Submit</button>
-</form>
+<div className={style.social}>
+     <div>Github</div>
+     <div>Linkedin</div>
+     <div>Whatsapp</div>
+     <div>Gmail</div>
+</div>
     </div>
-  )
+  );
 }

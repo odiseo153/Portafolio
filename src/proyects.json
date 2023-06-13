@@ -1,7 +1,7 @@
 [
   {
     "nombre": "Token con Nodejs",
-    "descripcion": "esto seria una api usando nodejs express y json web token con medio de autorizacion es el token ",
+    "descripcion": "esto seria una api usando nodejs express y json web token con cuyo medio de autorizacion es via token ",
     "imagen": "https://th.bing.com/th/id/R.7835fd7e3576c2679e2ac097a318baab?rik=qPVY3SPKriF7TQ&pid=ImgRaw&r=0",
     "link": "https://github.com/odiseo153/Nodejs_Token.git"
   },
