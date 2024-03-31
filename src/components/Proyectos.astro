@@ -1,0 +1,76 @@
+---
+import Badge from "./Badge.astro";
+import Libros from "../../public/libros.png";
+import HHRR from "../../public/hhrr.png";
+
+
+const PROJECTS = [
+  {
+    title: "Sistema de gestion de recursos humanos",
+    description:
+      "Este es un proyecto hecho con NET y Angular, este sistema simula lo que es la administracion de empleados desde el punto de vista de una persona de RRHH",
+    
+    github: "https://github.com/odiseo153/Sistema_Gestion_Recursos_Humanos",
+    image:
+     "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/03/image-49-1024x510.webp" ,
+  },
+ 
+  {
+    title: "Book Store Astro",
+    description:
+      "este es un proyecto en astro que simula funciones de una libreria, aqui usamos el tipico crud, los datos son de un json que esta en el proyecto",
+    github: "https://github.com/odiseo153/Book-Store-Astro",
+    link: "https://book-store-odiseo.netlify.app/",
+    image:
+    "../../public/libros.png",
+  },
+
+
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+
+             
+          </div>
+        </div> 
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && 
+                <a href={github} target="_blank">
+                  <Badge>  <i class="fa-brands fa-github w-5"></i> Code</Badge> 
+                </a>
+              }
+
+              {link &&
+                <a href={link} target="_blank">
+                  <Badge>  <i class="fa-solid fa-link w-5"></i> Preview</Badge> 
+                </a>
+              }
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
+ 
