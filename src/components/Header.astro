@@ -1,18 +1,15 @@
 ---
-import Badge from "./Badge.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <div class="w-full">
   <div class="flex gap-4 mb-4">
-
     <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Me llamo odiseo Esmerlin Rincon Sanchez
-  </h1>
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Me llamo odiseo Esmerlin Rincon Sanchez
+    </h1>
   </div>
-
- 
 
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
@@ -26,9 +23,11 @@ import Badge from "./Badge.astro";
       <Badge> <i class="fa-brands fa-github w-5"></i> Github</Badge>
     </a>
 
-    <a href="https://www.linkedin.com/in/odiseo-esmerlin-rincon-sanchez-48053524b/" target="_blank">
+    <a
+      href="https://www.linkedin.com/in/odiseo-esmerlin-rincon-sanchez-48053524b/"
+      target="_blank"
+    >
       <Badge><i class="fa-brands fa-linkedin w-5"></i>Linkedin</Badge>
     </a>
-
   </nav>
 </div>
