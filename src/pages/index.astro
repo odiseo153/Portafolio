@@ -5,25 +5,23 @@ import AboutMe from "../components/AboutMe.astro";
 import Proyectos from "../components/Proyectos.astro";
 ---
 
-<Layout title="Portafolio web">
+<Layout title="Odiseo Portafolio">
   <main>
     <h1>Welcome to my<span class="text-gradient"> Portfolio</span></h1>
 
-    <Header client:lazy />
+    <Header  />
 
-	<div class="mt-10">
-		<hr>
-		<h1 class="mt-5"><i class="fa-solid fa-code"></i> Proyectos</h1>
+    <div class="mt-10">
+      <hr />
+      <h1 class="mt-5"><i class="fa-solid fa-code"></i> Proyectos</h1>    
+      <Proyectos />
+    </div>
 
-		<Proyectos />
-	</div>
-
-	<div class="mt-20">
-		<hr >
-		<h1 class="mt-5"> <i class="fa-solid fa-user"></i> Sobre mi</h1>
-		<AboutMe />  
-	</div>
-
+    <div class="mt-20">
+      <hr />
+      <h1 class="mt-5"><i class="fa-solid fa-user"></i> Sobre mi</h1>
+      <AboutMe />
+    </div>
   </main>
 </Layout>
 

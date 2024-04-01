@@ -1,6 +1,6 @@
 ---
 import Technologies from "./Technologies.astro";
-
+import { Image } from "astro:assets";
 
 const Backend = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/800px-Microsoft_.NET_logo.svg.png",
@@ -18,9 +18,9 @@ const Frontend = [
 
 const baseDeDatos = [
   "https://media.datacenterdynamics.com/media/images/oracle_cloud.width-880.png",
-  "https://javguerra.github.io/assets/img/mysql.png",
+  "https://www.svgrepo.com/show/303251/mysql-logo.svg",
   "https://ipappg.edu.pe/blog/wp-content/uploads/2022/05/mssqlserver.png",
-  "https://i.ibb.co/kX3JpCQ/1-b0-Tt-GI6g-WFLlt-L1-Qk-Rx-Vdg.png",
+  "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3521676-2945120.png?f=webp",
 ];
 ---
 
@@ -59,10 +59,12 @@ const baseDeDatos = [
             Backend.map((item) => (
               <div class="">
                 <div class="flex justify-center mt-5">
-                  <img
+                  <Image 
                     class="rounded-full shadow-lg size-16"
                     src={item}
                     alt="imagen"
+                    width="50"
+                     height="50"
                   />
                 </div>
               </div>
@@ -82,10 +84,12 @@ const baseDeDatos = [
             Frontend.map((item) => (
               <div class="">
                 <div class="flex justify-center mt-5">
-                  <img
+                  <Image
                     class="rounded-full shadow-lg size-16"
                     src={item}
                     alt="imagen"
+                    width="50"
+                    height="50"
                   />
                 </div>
               </div>
@@ -105,10 +109,12 @@ const baseDeDatos = [
             baseDeDatos.map((item) => (
               <div class="">
                 <div class="flex justify-center mt-5">
-                  <img
+                  <Image
                     class="rounded-full shadow-lg size-16"
                     src={item}
                     alt="imagen"
+                    width="50"
+                     height="50"
                   />
                 </div>
               </div>
