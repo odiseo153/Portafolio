@@ -1,30 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Proyectos from "../components/Proyectos.astro";
+import Layout from "./../../layouts/Layout.astro";
+import Header from "./Header.astro";
+import AboutMe from "./AboutMe.astro";
+import Proyectos from "./Proyectos.astro";
 ---
 
 <Layout title="Odiseo Portafolio">
   <main>
     
-    <h1 class="mt-5">Bienvenido a mi <span class="text-gradient"> Portafolio</span></h1>
+    <h1>Welcome to my<span class="text-gradient"> Portfolio</span></h1>
 
-    
-
-    <div class="mt-10" id="quien" >
-      <Header  />
-    </div>
+    <Header  />
 
     <div class="mt-10" id="proyectos">
       <hr />
-      <h1 class="mt-5"><i class="fa-solid fa-code"></i> Proyectos</h1>    
+      <h1 class="mt-5"><i class="fa-solid fa-code"></i> Proyects</h1>    
       <Proyectos />
     </div>
 
     <div class="mt-20" id="sobre-mi">
       <hr />
-      <h1 class="mt-5"><i class="fa-solid fa-user"></i> Sobre mi</h1>
+      <h1 class="mt-5"><i class="fa-solid fa-user"></i> About me</h1>
       <AboutMe />
     </div>
   </main>
