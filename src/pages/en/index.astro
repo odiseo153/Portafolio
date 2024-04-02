@@ -3,22 +3,28 @@ import Layout from "./../../layouts/Layout.astro";
 import Header from "./Header.astro";
 import AboutMe from "./AboutMe.astro";
 import Proyectos from "./Proyectos.astro";
+import Navbar from "./Navbar.astro";
 ---
 
 <Layout title="Odiseo Portafolio">
+
   <main>
     
     <h1>Welcome to my<span class="text-gradient"> Portfolio</span></h1>
 
-    <Header  />
 
-    <div class="mt-10" id="proyectos">
+    <div class="mt-10" id="who-i-am" >
+      <Header  />
+    </div>
+
+
+    <div class="mt-10" id="proyects">
       <hr />
       <h1 class="mt-5"><i class="fa-solid fa-code"></i> Proyects</h1>    
       <Proyectos />
     </div>
 
-    <div class="mt-20" id="sobre-mi">
+    <div class="mt-20" id="about-me">
       <hr />
       <h1 class="mt-5"><i class="fa-solid fa-user"></i> About me</h1>
       <AboutMe />
