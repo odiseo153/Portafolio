@@ -22,5 +22,14 @@ export const projects = [
       link: "https://pokedex-odiseo.netlify.app/",
       image: "/pokemon.png",
     },
+    {
+      title: "IA Tools",
+      description:
+        "This is a project made in react where I use free LLM and create 2 AI, virtual assistant and an image generators",
+      github: "https://github.com/odiseo153/IA_Tools.git",
+      link: "https://ia-tools.netlify.app/",
+      image:
+      "/texto_a_texto.png",
+    }, 
   ];
   

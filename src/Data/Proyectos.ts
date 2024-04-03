@@ -28,5 +28,15 @@ export const proyectos = [
       image:
       "/pokemon.png",
     }, 
+
+    {
+      title: "IA Tools",
+      description:
+        "este es un proyecto hecho en react en donde uso LLM gratuito y creo 2 IA, asistente virtual, generador de imagenes",
+      github: "https://github.com/odiseo153/IA_Tools.git",
+      link: "https://ia-tools.netlify.app/",
+      image:
+      "/texto_a_texto.png",
+    }, 
   
   ];
