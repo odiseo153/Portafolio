@@ -1,17 +1,22 @@
 ---
-const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
+import { setRuta } from "../Data/NavItems.ts";
+
+const THEMES = [
+  { nombre: "Español", ruta: "/" },
+  { nombre: "English", ruta: "/en" },
+];
+
 
 
 ---
 
 <div class="relative ml-1 mr-1">
+  
   <button
     id="theme-toggle-btn"
     class="appearance-none border-none flex hover:scale-125 transition"
   >
     <svg
-      {...Astro.props}
-      class=""
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -35,11 +40,11 @@ const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
       {
         THEMES.map((e) => (
           <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
-            <a href={e.ruta} >{e.nombre}</a>
-          </li>
-        )) 
+            <a href={e.ruta}>{e.nombre}</a>
+          </li> 
+        ))
       }
-    </ul> 
+    </ul>
   </div>
 </div>
 
@@ -50,7 +55,7 @@ const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
   }
 
   @keyframes scale-up-center {
-    from { 
+    from {
       transform: scale(0.8);
       opacity: 0;
     }
@@ -60,18 +65,22 @@ const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
       opacity: 1;
     }
   }
+
+  #input-ejemplo{
+    display:over;
+  }
+
+
 </style>
 
 <script is:inline>
+  
+  
+const probando =[]
   let remove = null;
   const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
   const themesMenu = document.getElementById("themes-menu");
-  const idioma =document.getElementById("idioma");
 
- const establecerIdioma = (idioma) =>{
-    //localStorage.setItem("idioma",idioma.value)
-    console.log(idioma)
-  }
 
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined") {
@@ -87,9 +96,11 @@ const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
     document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
       element.style.scale = element.id === themePreference ? "1" : "0";
     });
+
   };
 
   const updateTheme = () => {
+    
     if (remove != null) {
       remove();
     }
@@ -113,14 +124,21 @@ const THEMES = [{nombre:"Español",ruta:"/"}, {nombre:"English",ruta:"/en"}];
 
   document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
     e.stopPropagation();
+    
     const isClosed = !themesMenu.classList.contains("open");
     themesMenu.classList[isClosed ? "add" : "remove"]("open");
   });
 
   document.querySelectorAll(".themes-menu-option").forEach((element) => {
     element.addEventListener("click", (e) => {
+  localStorage.setItem("hola","odiseo")
       localStorage.setItem("theme", e.target.innerText.toLowerCase().trim());
       updateTheme();
     });
   });
 </script>
+
+
+
+
+

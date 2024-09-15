@@ -38,5 +38,13 @@ export const proyectos = [
       image:
       "/texto_a_texto.png",
     }, 
+    {
+      title: "Api gestora de productos",
+      description:
+        "Esta API es un servicio de gestión de productos desarrollado en .NET con SQL Server como base de datos. Se ha implementado utilizando la arquitectura Onion, CORQ, el patrón de diseño Repository, y una arquitectura genérica con una única clase de servicios que maneja todas las operaciones de la API. Además, la API utiliza JSON Web Tokens (JWT) para la autenticación",
+      github: "https://github.com/odiseo153/Api_Gestor_De_Productos",
+      image:
+      "/api.png",
+    }
   
   ];

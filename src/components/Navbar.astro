@@ -12,16 +12,17 @@ import {navItems,navItemsES}from '../Data/NavItems.ts';
   class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
  >
   {
-   navItemsES.map((link) => (
+   navItems().map((link) => (
     <a
      class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
      aria-label={link.label}
      href={link.url}
-    >
+    >  
      {link.title} 
     </a>
    ))
   }
+  
   <ThemeToggle /> 
  </nav>
 </header>

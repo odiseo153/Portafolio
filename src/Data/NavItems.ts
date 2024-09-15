@@ -1,21 +1,25 @@
 
+let ruta = ""
 
+export const setRuta = (rut:string) =>{
+  ruta=rut
+}
 
 export const navItemsEN = [
     {
       title: "Who i am",
       label: "who i am",
-      url: "/#who-i-am",
+      url: "/en/#who-i-am",
     },
     {
       title: "Proyects",
       label: "proyects",
-      url: "/#proyects",
+      url: "/en/#proyects",
     },
     {
       title: "About-me",
       label: "about-me",
-      url: "/#about-me",
+      url: "/en/#about-me",
     },
     {
       title: "Contact", 
@@ -48,13 +52,11 @@ export const navItemsEN = [
     },
   ]
 
-  export function navItems() {
-    const ruta = localStorage.getItem("idioma")
-
+  export function navItems():any[] {
+console.log(ruta)
     if (ruta === "/en") {
       return navItemsEN;
-    } else {
-      return navItemsES;
     }
+
+      return navItemsES;
   }
-  
