@@ -1,38 +1,46 @@
-interface Experience {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-}
-
-const experiences: Experience[] = [
-  {
-    title: "Desarrollador Full Stack",
-    company: "Partido Anr",
-    period: "2023 - 2023",
-    description: "Trabajé como Desarrollador Full Stack para el partido ANR de Paraguay, donde desarrollé una plataforma para la gestión y administración de votantes. Implementé el backend utilizando .NET con Entity Framework, lo que permitió un manejo eficiente de las bases de datos y una integración fluida con otras partes del sistema "
-  },
-  {
-    title: "Desarrollador Full Stack`",
-    company: "AddTo",
-    period: "2024 - 2024",
-    description: "Trabajé como Desarrollador Full-Stack en AddTo, donde desarrollé una solución de IA personalizada para la empresa. En este proyecto, utilicé Python como lenguaje principal y Flask para construir la API que gestionaba la interacción con la IA. y tambien HTML , CSS , JavaScript para la creacion de la interfaz"
-  }
-];
+import { useState } from "react";
+import { experiences } from "../Data/Experiencias";
+import ModalInfoExperience from "./ModalInfoExperience";
 
 const Experiences = () => {
+  const [selectedExperienceId, setSelectedExperienceId] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = (id) => {
+    setSelectedExperienceId(id);
+    setIsOpen(true);  // Abre el modal
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false); // Cierra el modal
+  };
+
   return (
-    <section id="experience" className="py-20  text-white">
+    <section id="experience" className="py-20 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center text-stellar-yellow animate-pulse">
           Experiencias
         </h2>
+
+        {/* Renderizar el modal solo cuando esté abierto */} 
+        {isOpen && (
+          <ModalInfoExperience
+            id={selectedExperienceId}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
+        )}
+
+        {/* Tarjetas de Experiencia */}
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <div 
-              key={index} 
-              className="bg-dark-space p-6 border-2 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500 ease-out animate-fade-in"
+          {experiences.map((exp) => (
+            <div
+              key={exp.id}
+              onClick={() => handleOpenModal(exp.id)} // Abre el modal con el ID correcto
+              
+              className="relative bg-dark-space p-6 border-2 border-gray-700 rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 ease-out animate-fade-in"
             >
+              
               <h3 className="text-2xl text-galactic-blue font-semibold mb-2">
                 {exp.title}
               </h3>

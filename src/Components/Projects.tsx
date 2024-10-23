@@ -119,6 +119,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Paginación */}
+        {filteredProjects.length > itemsPerPage &&
         <div className="flex justify-center mt-10">
           {Array.from({ length: totalPages }, (_, index) => (
             <button 
@@ -129,6 +130,7 @@ const Projects: React.FC = () => {
             </button>
           ))}
         </div>
+        }
       </div>
     </section>
   );
