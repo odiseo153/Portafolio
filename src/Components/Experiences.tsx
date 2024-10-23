@@ -6,14 +6,11 @@ const Experiences = () => {
   const [selectedExperienceId, setSelectedExperienceId] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpenModal = (id) => {
+  const handleOpenModal = (id:number) => {
     setSelectedExperienceId(id);
     setIsOpen(true);  // Abre el modal
   };
 
-  const handleCloseModal = () => {
-    setIsOpen(false); // Cierra el modal
-  };
 
   return (
     <section id="experience" className="py-20 text-white">
