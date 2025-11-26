@@ -8,13 +8,12 @@ const Header = React.lazy(() => import("../Components/Header"));
 const Hero = React.lazy(() => import("../Components/Hero"));
 const Projects = React.lazy(() => import("../Components/Projects"));
 const Skills = React.lazy(() => import("../Components/Skills"));
+const Contact = React.lazy(() => import("../Components/Contact"));
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
-
-
 
 export const Home: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -37,8 +36,8 @@ export const Home: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <Suspense fallback={<div className="text-center">Cargando...</div>}>
+    <div className="bg-gray-900 min-h-screen">
+      <Suspense fallback={<div className="h-screen flex items-center justify-center text-white">Cargando...</div>}>
         {/* Animación del header cuando se pasa Hero */}
         {showHeader && (
             <Header />
@@ -87,6 +86,16 @@ export const Home: React.FC = () => {
           transition={{ duration: 0.4, delay: 0.6 }}
         >
           <Skills />
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.8 }}
+        >
+          <Contact />
         </motion.div>
 
         <Footer />
